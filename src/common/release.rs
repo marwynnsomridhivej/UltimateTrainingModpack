@@ -174,6 +174,7 @@ fn get_current_version() -> Result<String> {
 }
 
 pub fn perform_version_check() {
+    /*
     let update_policy = get_update_policy();
     info!("Update Policy is {}", update_policy);
     let mut release_to_apply = match update_policy {
@@ -218,4 +219,5 @@ pub fn perform_version_check() {
             warn!("Did not install update. Reason: {:?}", e);
         }
     }
+    */
 }
