@@ -74,10 +74,12 @@ impl Release {
     }
 }
 
+#[allow(dead_code)]
 fn get_update_policy() -> UpdatePolicy {
     read(&MENU).update_policy
 }
 
+#[allow(dead_code)]
 fn get_release(beta: bool) -> Result<Release> {
     // Get the list of releases from Github
     let url = format!(
@@ -150,6 +152,7 @@ fn get_release(beta: bool) -> Result<Release> {
     }
 }
 
+#[allow(dead_code)]
 fn user_wants_to_install() -> bool {
     dialog::no_yes(
         "There is a new update available for the Training Modpack. \n\n\
