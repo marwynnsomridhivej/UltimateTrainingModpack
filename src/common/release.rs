@@ -219,5 +219,5 @@ pub fn perform_version_check() {
             warn!("Did not install update. Reason: {:?}", e);
         }
     }
-    */
+        */
 }

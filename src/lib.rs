@@ -111,19 +111,6 @@ pub fn main() {
         .expect("Couldn't create data loader thread");
     let _result = data_loader.join();
 
-    if !is_emulator() {
-        info!("Performing version check...");
-        let _updater = std::thread::Builder::new()
-            .stack_size(0x80000)
-            .spawn(move || {
-                release::perform_version_check();
-            })
-            .expect("Couldn't create version check thread");
-        let _result = _updater.join();
-    } else {
-        info!("Skipping version check because we are using an emulator");
-    }
-
     notification("Training Modpack".to_string(), "Welcome!".to_string(), 60);
     notification(
         "Open Menu".to_string(),
